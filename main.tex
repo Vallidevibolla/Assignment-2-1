@@ -157,33 +157,46 @@ Given,
 \vec{A}=\myvec{6\\5} \\
 \vec{B}=\myvec{-4\\3}
 \end{align}
+Let $\underline{x}$ be the point on y-axis.Then\\
 
-Since the required point is in y-axis, its x-coordinate will be zero
-
-Let the required point = C\myvec{0\\y}
-
-Given the point on y-axis is equidistance from A and B
-
-Distance between two points given as
 \begin{align}
-    d= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}  
+//$\underline{x}$-$\underline{A}$//^2=//$\underline{x}$-$\underline{B}$//^2
+\\
+\boxed{($\underline{x}$-$\underline{A}$)^T($\underline{x}$-$\underline{A}$)=($\underline{x}$-$\underline{B}$)^T($\underline{x}$-$\underline{B}$)}
+\\
+($\underline{x}$-$\underline{A}$)^T($\underline{x}$-$\underline{A}$)=$\underline{x}$^T $\underline{x}$-$\underline{x}$^T $\underline{A}$-$\underline{A}$^T $\underline{x}$+$\underline{A}$^T $\underline{A}$
+\\
+($\underline{x}$-$\underline{B}$)^T($\underline{x}$-$\underline{B}$)=$\underline{x}$^T $\underline{x}$-$\underline{x}$^T $\underline{B}$-$\underline{B}$^T $\underline{x}$+$\underline{B}$^T $\underline{B}$
+\end{align}
+Consider the expressions 
+
+\begin{align}
+$\underline{x}$^T $\underline{x}$=//x//^2\\
+$\underline{x}$^T $\underline{A}$=$\underline{A}$^T $\underline{x}$
 \end{align}
 
-$\therefore$ AC=BC \\
+Final expression of equ.2.0.4 using this written as 
 
-\boxed{\sqrt{(x_3-x_1)^2+(y_3-y_1)^2}= \sqrt{(x_3-x_2)^2+(y_3-y_2)^2}}\\
-
-\sqrt{(0-6)^2+(y-5)^2}=\sqrt{(0-(-4))^2+(y-3)^2}
-
-Squaring on both sides
 \begin{align}
-\implies(y-5)^2+36=(y-3)^2+16\\
-\implies y^2+25-10y+36=y^2+9-6y+16\\
-\implies61-10y=25-6y
-\implies4y=36\\
-\implies\boxed{y=9}
+//x//^2-2 $\underline{A}$^T $\underline{x}$+$\underline{A}$^T $\underline{A}$=//x//^2-2 $\underline{B}$^T $\underline{x}$+$\underline{B}$^T $\underline{B}$
+\\
+\implies-2 $\underline{A}$^T $\underline{x}$+2 $\underline{B}$^T $\underline{x}$= $\underline{B}$^T $\underline{B}$-$\underline{A}$^T $\underline{A}$
+\\
+\implies 2 $\underline{x}$($\underline{A}$^T-$\underline{B}$^T)= $\underline{A}$^T $\underline{A}$-$\underline{B}$^T $\underline{B}$\\
+2 $\underline{x}$($\underline{A}$^T-$\underline{B}$^T)=//A//^2-//B//^2
 \end{align}
-Finally the point 'C' on y-axis eqidistance from A and B is \myvec{0\\9}
+$\underline{x}$ lies on the y-axis
+
+$\underline{x}$ = y\myvec{0\\1}= y $\underline{e}_2$
+Now substitute this in equ.2.0.12
+
+\begin{align}
+2y\myvec{0\\1}. \myvec{10\ 2}=61-25 \\
+2y\myvec{0+2}=36\\
+4y=36\\
+ \boxed{$\therefore$ y=9}
+\end{align}
+     
 
 \numberwithin{figure}{section}
 \begin{figure}[ht]
