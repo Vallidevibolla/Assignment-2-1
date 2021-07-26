@@ -11,16 +11,20 @@ Original file is located at
 
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-import numpy.linalg as LA
+import matplotlib.pyplot as plt 
+import numpy as np 
 
-plt.axis([-6,11,-6,11])
+import subprocess
+import shlex
+
+plt.axis([-6,12,-6,12])
 
 plt.axis('on')
 
+A = np.array([6,5])
+C = np.array([0,9])
+B = np.array([-4,3])
 
- #Generate line points
 def line_gen(A,B):
   len =10
   x_AB = np.zeros((2,len))
@@ -29,30 +33,24 @@ def line_gen(A,B):
     temp1 = A + lam_1[i]*(B-A)
     x_AB[:,i]= temp1.T
   return x_AB
-  
-#Defining the points
-A = np.array([6,5])
-B = np.array([-4,3])
-C = np.array([0,9])
 
-#Generating lines
-x_AB = line_gen(A,B)
+x_AC = line_gen(A,C)
 x_BC = line_gen(B,C)
-x_CA = line_gen(C,A)
 
-#Plotting all lines
-plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
+
+
+plt.plot(x_AC[0,:],x_AC[1,:],label='$AC$')
 plt.plot(x_BC[0,:],x_BC[1,:],label='$BC$')
-plt.plot(x_CA[0,:],x_CA[1,:],label='$CA$')
 
-plt.plot(A[0], A[1], 'o')
-plt.text(A[0] * (1), A[1] * (1 + 0.1) , 'A')
-plt.plot(B[0], B[1], 'o')
-plt.text(B[0] * (1 - 0.2), B[1] * (1 + 0.1) , 'B')
-plt.plot(C[0], C[1], 'o')
-plt.text(C[0] * (1 + 0.03), C[1] * (1 - 0.1) , 'C')
 
-plt.xlabel('$x$')
-plt.ylabel('$y$')
+plt.xlabel('$x-axis$')
+plt.ylabel('$y-axis$')
+
+plt.text (6,5,'A(6,5)')
+plt.text(-4,3,'B(-4,3)')
+plt.text(0,9,'C(0,9)')
 plt.legend(loc='best')
-plt.grid() # minor
+plt.grid() 
+plt.axis('equal')
+
+plt.show()
