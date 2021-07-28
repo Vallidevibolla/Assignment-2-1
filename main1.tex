@@ -159,37 +159,38 @@ Given,
 Let $\underline{x}$ be the point on y-axis.Then\\
 \begin{align}
 \boxed{\norm{\vec{x}-\vec{A}}^2=\norm{\vec{x}-\vec{B}}^2 }\\
-\boxed{(\vec{x}-\vec{A})^T(\vec{x}-\vec{A})=(\vec{x}-\vec{B})^T(\vec{x}-\vec{B})}
+\boxed{(\vec{x}-\vec{A})^{\top}(\vec{x}-\vec{A})=(\vec{x}-\vec{B})^{\top}(\vec{x}-\vec{B})}
 \\
-(\vec{x}-\vec{A})^T(\vec{x}-\vec{A})=\vec{x}^T \vec{x}-\vec{x}^T \vec{A}-\vec{A}^T \vec{x}+\vec{A}^T \vec{A}
+(\vec{x}-\vec{A})^{\top}(\vec{x}-\vec{A})=\vec{x}^{\top} \vec{x}-\vec{x}^{\top} \vec{A}-\vec{A}^{\top} \vec{x}+\vec{A}^{\top} \vec{A}
 \\
-(\vec{x}-\vec{B})^T(\vec{x}-\vec{B})=\vec{x}^T \vec{x}-\vec{x}^T \vec{B}-\vec{B}^T \vec{x}+\vec{B}^T \vec{B}
+(\vec{x}-\vec{B})^{\top}(\vec{x}-\vec{B})=\vec{x}^{\top} \vec{x}-\vec{x}^{\top} \vec{B}-\vec{B}^{\top} \vec{x}+\vec{B}^{\top} \vec{B}
 \end{align}
 Consider the expressions 
 \begin{align}
-\vec{x}^T \vec{x}=\norm{\vec{x}}^2\\
-\vec{x}^T \vec{A}=\vec{A}^T \vec{x}
+\vec{x}^{\top} \vec{x}=\norm{\vec{x}}^2\\
+\vec{x}^{\top} \vec{A}=\vec{A}^{\top} \vec{x}
 \end{align}
 
 Final expression of equ.2.0.4 using this written as 
 \begin{align}
-\boxed{\norm{\vec{x}}^2-2 \vec{A}^T \vec{x}+\vec{A}^T \vec{A}=\norm{\vec{x}}^2-2 \vec{B}^T \vec{x}+\vec{B}^T \vec{B}}\\
-\implies-2 \vec{A}^T \vec{x}+2 \vec{B}^T \vec{x}= \vec{B}^T \vec{B}-\vec{A}^T \vec{A}\\
-\implies 2 \vec{x}(\vec{A}^T-\vec{B}^T)= \vec{A}^T \vec{A}-\vec{B}^T \vec{B}\\
-2 \vec{x}(\vec{A}^T-\vec{B}^T)=\norm{\vec{A}}^2-\norm{\vec{B}}^2
+\boxed{\norm{\vec{x}}^2-2 \vec{A}^{\top} \vec{x}+\vec{A}^{\top} \vec{A}=\norm{\vec{x}}^2-2 \vec{B}^{\top} \vec{x}+\vec{B}^{\top} \vec{B}}\\
+\implies-2 \vec{A}^{\top} \vec{x}+2 \vec{B}^{\top} \vec{x}= \vec{B}^{\top} \vec{B}-\vec{A}^{\top} \vec{A}\\
+\implies 2 \vec{x}(\vec{A}^{\top}-\vec{B}^{\top})= \vec{A}^{\top} \vec{A}-\vec{B}^{\top} \vec{B}\\
+2 \vec{x}(\vec{A}^{\top}-\vec{B}^{\top})=\norm{\vec{A}}^2-\norm{\vec{B}}^2
 \end{align}
 \vec{x} lies on the y-axis\\
 \boxed{\vec{x}= y\myvec{0\\1}= y \vec{e_2}}\\
 Now substitute this in equ.2.0.12
 
 \begin{align}
-2\vec{ye_2}(\vec{A}^T-\vec{B}^T)=\norm{\vec{A}}^2-\norm{\vec{B}}^2\\
-\boxed{\vec{y}=\dfrac{\vec{//A//}^2-\vec{//B//}^2}{\vec{2e_2}.(\vec{A}^T-\vec{B}^T)}}\\
-\vec{2e_2}.(\vec{A}^T-\vec{B}^T)=2\myvec{0\\1}.\myvec{10\ 2}=4\\
+2\vec{ye_2}(\vec{A}^{\top}-\vec{B}^{\top})=\norm{\vec{A}}^2-\norm{\vec{B}}^2\\
+\boxed{\vec{y}=\dfrac{\vec{//A//}^2-\vec{//B//}^2}{\vec{2e_2}(\vec{A}^{\top}-\vec{B}^{\top})}}\\
+\vec{2e_2}(\vec{A}^{\top}-\vec{B}^{\top})=2\myvec{0\\1}\myvec{10\ 2}=4\\
 \implies\vec{y}=\myvec{\dfrac{61-25}{4}}
 \vec{y}=\myvec{\dfrac{36}{4}}\\
  \boxed{\therefore y=9}
 \end{align}
+
 
 Finally the desired point on y-axis equidistance from A and B is \myvec{0\\9}.
  \\
