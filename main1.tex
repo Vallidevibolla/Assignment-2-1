@@ -35,16 +35,17 @@
 
 \usetikzlibrary{calc,math}
 \usepackage{listings}
-    \usepackage{color}                                            %%
-    \usepackage{array}                                            %%
-    \usepackage{longtable}                                        %%
-    \usepackage{calc}                                             %%
-    \usepackage{multirow}                                         %%
-    \usepackage{hhline}                                           %%
-    \usepackage{ifthen}                                           %%
+    \usepackage{color} %%
+    \usepackage{array} %%
+    \usepackage{longtable} %%
+    \usepackage{calc} %%
+    \usepackage{multirow} %%
+    \usepackage{hhline} %%
+    \usepackage{ifthen} %%
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 \DeclareMathOperator*{\Res}{Res}
 
@@ -58,7 +59,7 @@
 
 
 \hyphenation{op-tical net-works semi-conduc-tor}
-\def\inputGnumericTable{}                                 %%
+\def\inputGnumericTable{} %%
 
 \lstset{
 %language=C,
@@ -97,16 +98,16 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
+%\providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
 \providecommand{\norm}[1]{$\left\lVert#1\right\rVert$}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
+%\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+ %\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
@@ -178,18 +179,27 @@ Final expression of equ.2.0.4 using this written as
 \implies 2 \vec{x}(\vec{A}^{\top}-\vec{B}^{\top})= \vec{A}^{\top} \vec{A}-\vec{B}^{\top} \vec{B}\\
 2 \vec{x}(\vec{A}^{\top}-\vec{B}^{\top})=\norm{\vec{A}}^2-\norm{\vec{B}}^2
 \end{align}
+
 \vec{x} lies on the y-axis\\
 \boxed{\vec{x}= y\myvec{0\\1}= y \vec{e_2}}\\
 Now substitute this in equ.2.0.12
 
 \begin{align}
 2\vec{ye_2}(\vec{A}^{\top}-\vec{B}^{\top})=\norm{\vec{A}}^2-\norm{\vec{B}}^2\\
-\boxed{\vec{y}=\dfrac{\vec{//A//}^2-\vec{//B//}^2}{\vec{2e_2}(\vec{A}^{\top}-\vec{B}^{\top})}}\\
+\boxed{\vec{y} = \frac{\norm{\vec{A}}^2 - \norm{\vec{B}}^2}{2\vec{e_2}(\vec{A}^{\top} - \vec{B}^{\top})}}\\
 \vec{2e_2}(\vec{A}^{\top}-\vec{B}^{\top})=2\myvec{0\\1}\myvec{10\ 2}=4\\
 \implies\vec{y}=\myvec{\dfrac{61-25}{4}}
 \vec{y}=\myvec{\dfrac{36}{4}}\\
  \boxed{\therefore y=9}
 \end{align}
+
+%\begin{align}
+%\vec{y} = \frac{\norm{\vec{A}}^2 - \norm{\vec{B}}^2}{2\vec{e_2}(\vec{A}^{\top} - \vec{B}^{\top})}
+%\end{align}
+
+%\begin{align}
+%\vec{y} = \frac{\norm{a}}{2}
+%\end{align}
 
 
 Finally the desired point on y-axis equidistance from A and B is \myvec{0\\9}.
